@@ -1,6 +1,6 @@
 # OfficeCLI for Android — download
 
-**[Download the Android APK](https://github.com/yashasvamoond-commits/OfficeAI/releases/download/officecli-android-v1.0.0/OfficeCLI-Library.apk)**
+**[Download the Android APK](https://github.com/yashasvamoond-commits/OfficeAI/raw/refs/heads/arena/c38979bc-officeai/OfficeCLI-Library.apk)**
 
 This installable app is an offline reference companion for the upstream [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) project. It includes an offline overview, the upstream README, and a curated ZIP of source, skills, schemas, and examples; it also links to the full upstream source archive and desktop releases.
 

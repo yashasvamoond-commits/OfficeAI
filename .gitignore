@@ -3,3 +3,4 @@ android-app/node_modules/
 android-app/build/
 dist/
 *.apk
+!OfficeCLI-Library.apk
