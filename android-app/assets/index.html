@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07111f"><title>OfficeCLI Library</title>
+  <style>
+    :root{color-scheme:dark;--bg:#07111f;--panel:#101d30;--line:#23334a;--text:#f5f8ff;--muted:#9eafc6;--cyan:#5eead4;--blue:#7aa8ff}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#143654 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .wrap{max-width:920px;margin:auto;padding:24px 20px 56px}.brand{display:flex;align-items:center;gap:12px;margin:8px 0 40px}.mark{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#36dbc5,#6489ff);color:#07111f;font-weight:900;font-size:20px}.brand span{font-weight:750;letter-spacing:.02em}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(38px,9vw,68px);line-height:1.02;letter-spacing:-.055em;margin:14px 0}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p{max-width:650px;color:var(--muted);font-size:18px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:12px;text-decoration:none;font-weight:750}.primary{background:var(--cyan);color:#05121e}.secondary{border:1px solid #48607b;color:var(--text);background:#0c1929}.note{padding:14px 16px;border:1px solid #29435b;border-radius:14px;background:#0d1b2b;color:#b8c8db;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0 30px}.card{background:linear-gradient(145deg,#12233a,#0c1727);border:1px solid var(--line);border-radius:17px;padding:18px}.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}.section-title{font-size:22px;margin:34px 0 12px}.code{white-space:pre-wrap;background:#030a13;border:1px solid var(--line);border-radius:14px;padding:16px;color:#d6e7ff;font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.pill{font-size:12px;padding:5px 10px;border:1px solid #2a425b;border-radius:999px;color:#c7d6e8}.foot{margin-top:38px;color:#7f91aa;font-size:12px}.a{color:#a7c3ff}
+  </style>
+</head>
+<body><main class="wrap">
+  <header class="brand"><div class="mark">O</div><span>OFFICECLI <span style="color:#7890aa;font-weight:500">/ LIBRARY</span></span></header>
+  <section class="hero"><div class="eyebrow">The open-source AI office toolkit</div><h1>Documents,<br><em>under control.</em></h1>
+    <p>An offline-friendly guide to OfficeCLI: the command-line toolkit for reading, creating, editing, validating, and rendering Word, Excel, and PowerPoint files.</p>
+  </section>
+  <div class="actions"><a class="btn primary" href="OfficeCLI-README.html">Read the offline README ↓</a><a class="btn secondary" href="https://github.com/iOfficeAI/OfficeCLI/archive/refs/heads/main.zip">Download source ZIP ↗</a></div>
+  <div class="note"><strong>About this Android app:</strong> This is an offline reference companion, not a port of the OfficeCLI command-line engine. The upstream CLI targets desktop operating systems; Android document editing is not included. The APK bundles the upstream README and a curated source archive for offline reference.</div>
+  <h2 class="section-title">What OfficeCLI does</h2>
+  <div class="grid">
+    <article class="card"><h3>📄 Word</h3><p>Create, inspect, and edit DOCX documents, tables, styles, images, comments, and more.</p></article>
+    <article class="card"><h3>📊 Excel</h3><p>Read and update workbooks, formulas, charts, pivot tables, formatting, and sheets.</p></article>
+    <article class="card"><h3>🎞 PowerPoint</h3><p>Build and inspect presentations with slides, shapes, tables, charts, and previews.</p></article>
+    <article class="card"><h3>👁 Render & review</h3><p>Render documents to HTML, SVG, or screenshots for an AI-friendly visual feedback loop.</p></article>
+  </div>
+  <h2 class="section-title">Quick start (desktop)</h2>
+  <div class="code"># macOS / Linux
+curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh | bash
+
+# Create and preview a presentation
+officecli create deck.pptx
+officecli add deck.pptx / --type slide --prop title="Hello, World!"
+officecli view deck.pptx html</div>
+  <div class="pills"><span class="pill">Open source · Apache-2.0</span><span class="pill">DOCX</span><span class="pill">XLSX</span><span class="pill">PPTX</span><span class="pill">AI agent friendly</span></div>
+  <div class="actions"><a class="btn secondary" href="https://github.com/iOfficeAI/OfficeCLI/releases">Get the desktop CLI ↗</a><a class="btn secondary" href="https://github.com/iOfficeAI/OfficeCLI/blob/main/SKILL.md">Read the agent skill ↗</a></div>
+  <footer class="foot">OfficeCLI is an independent open-source project by iOfficeAI. This companion is unofficial and is not affiliated with or endorsed by the upstream maintainers.</footer>
+</main></body></html>

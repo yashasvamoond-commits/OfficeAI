@@ -1,0 +1,39 @@
+name: Build OfficeCLI Android companion
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'android-app/**'
+      - '.github/workflows/android-apk.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install APK packaging tools
+        run: npm ci --prefix android-app
+      - name: Checkout OfficeCLI source
+        run: git clone --depth 1 https://github.com/iOfficeAI/OfficeCLI.git "$RUNNER_TEMP/OfficeCLI"
+      - name: Build and sign APK
+        env:
+          ANDROID_TOOLS_DIR: ${{ github.workspace }}/android-app
+        run: ./android-app/scripts/build.sh "$RUNNER_TEMP/OfficeCLI" "$RUNNER_TEMP/OfficeCLI-Library.apk"
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: OfficeCLI-Library-Android
+          path: ${{ runner.temp }}/OfficeCLI-Library.apk
+          if-no-files-found: error
+          retention-days: 30

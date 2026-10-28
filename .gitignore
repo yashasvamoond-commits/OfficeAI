@@ -1,0 +1,5 @@
+# Android build outputs and local dependencies
+android-app/node_modules/
+android-app/build/
+dist/
+*.apk

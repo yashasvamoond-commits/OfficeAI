@@ -1,0 +1,9 @@
+{
+  "name": "officecli-library-android-build",
+  "private": true,
+  "description": "Build tooling for the OfficeCLI offline Android reference companion.",
+  "dependencies": {
+    "@postar/apktool-node": "0.3.4",
+    "marked": "15.0.12"
+  }
+}
